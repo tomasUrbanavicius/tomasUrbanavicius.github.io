@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7768c106-247a-4274-b6be-f9e5aef3d065" name="Changes" comment="Add company logo">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.tomasUrbanavicius.github.io.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tomasUrbanavicius.github.io.dir/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7768c106-247a-4274-b6be-f9e5aef3d065" name="Changes" comment="change path" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +31,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701252150258</updated>
-      <workItem from="1701252160991" duration="726000" />
+      <workItem from="1701252160991" duration="1063000" />
     </task>
     <task id="LOCAL-00001" summary="Stormgeo login page">
       <created>1701252234761</created>
@@ -56,7 +54,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701252524727</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change path">
+      <created>1701253004988</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701253004988</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -78,6 +83,7 @@
     <MESSAGE value="Stormgeo login page" />
     <MESSAGE value="Change to index.html" />
     <MESSAGE value="Add company logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add company logo" />
+    <MESSAGE value="change path" />
+    <option name="LAST_COMMIT_MESSAGE" value="change path" />
   </component>
 </project>
