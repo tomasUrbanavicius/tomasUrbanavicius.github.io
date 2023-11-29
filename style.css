@@ -1,14 +1,87 @@
 body {
     background-image: url("https://tomasurbanavicius.github.io/background.jpg");
     background-size: cover;
+    font-family: Open Sans, sans-serif;
 }
 
 #api {
     background: white;
+    border-radius: 4px;
     left: 50%;
-    padding: 16px;
+    padding: 48px;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
     width: 470px;
+}
+
+.intro::before {
+    content: url("https://tomasurbanavicius.github.io/stormgeo-logo.png");
+    left: 110px;
+    position: relative;
+    width: 250px;
+}
+
+.intro::after {
+    content: "Sign in";
+    padding-top: 16px;
+    display: block;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.intro p {
+    display: none;
+}
+
+.TextBox {
+    display: block;
+}
+
+ul {
+    padding: 0;
+}
+
+#signInName_label {
+    display: none;
+}
+
+input {
+    width: -webkit-fill-available;
+    height: 36px;
+    border: 1px solid #767676;
+    border-radius: 4px;
+    padding: 0 8px;
+}
+
+.helpLink {
+    display: none;
+}
+
+#cancel {
+    display: none;
+}
+
+button {
+    padding: 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+button[type="submit"] {
+    background: #0E5DF9;
+    color: white;
+    border-color: #0E5DF9;
+}
+
+button[type="submit"]:hover {
+    background: #0c4cc8;
+}
+
+.buttons {
+    margin: 0 auto;
+    width: fit-content;
 }
