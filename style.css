@@ -16,23 +16,18 @@ body {
 }
 
 .intro::before {
-    content: url("https://tomasurbanavicius.github.io/stormgeo-logo.png");
+    content: url("stormgeo-logo.png");
     left: 110px;
     position: relative;
     width: 250px;
 }
 
-.intro::after {
-    content: "Sign in";
+.intro p {
     padding-top: 16px;
     display: block;
     font-weight: 700;
     font-size: 28px;
     line-height: 40px;
-}
-
-.intro p {
-    display: none;
 }
 
 .TextBox {
