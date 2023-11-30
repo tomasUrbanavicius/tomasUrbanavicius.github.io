@@ -16,7 +16,7 @@ body {
 }
 
 .intro::before {
-    content: url("stormgeo-logo.png");
+    content: url("https://tomasurbanavicius.github.io/stormgeo-logo.png");
     left: 110px;
     position: relative;
     width: 250px;
