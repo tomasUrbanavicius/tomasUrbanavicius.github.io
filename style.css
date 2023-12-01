@@ -9,6 +9,7 @@ body {
     background-image: url("https://tomasurbanavicius.github.io/background.jpg");
     background-size: cover;
     font-family: Open Sans, sans-serif;
+    background-attachment: fixed;
 }
 
 #api {
@@ -87,6 +88,8 @@ button[type="submit"]:hover {
 .buttons {
     margin: 0 auto;
     width: fit-content;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .entry-item {
@@ -129,6 +132,11 @@ button[type="submit"]:hover {
     color: #0E5DF9;
     background: white;
     border: none;
+}
+
+.back-button-text {
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .back-icon {
