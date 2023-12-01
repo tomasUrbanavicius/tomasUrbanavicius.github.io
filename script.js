@@ -23,17 +23,9 @@
 
 const elem = document.getElementById('api');
 changeElements();
-console.log(elem);
 observeDOM(elem, function (m) {
-    var addedNodes = [], removedNodes = [];
-    m.forEach(record => record.addedNodes.length & addedNodes.push(...record.addedNodes))
-
-    m.forEach(record => record.removedNodes.length & removedNodes.push(...record.removedNodes))
-
     changeElements();
-    console.log('Added:', addedNodes, 'Removed:', removedNodes);
 });
-
 
 function changeElements() {
     //Change email input to div
@@ -59,7 +51,7 @@ function changeElements() {
     if (nextButton && backButton.length === 0) {
         const newButton = document.createElement('button');
         newButton.className = 'back-button';
-        newButton.innerHTML = '<div class="back-button-text" onclick="history.back()"><span class="material-icons back-icon">arrow_back_ios</span>Back</div>';
+        newButton.innerHTML = '<div class="back-button-text" onclick="location.reload()"><span class="material-icons back-icon">arrow_back_ios</span>Back</div>';
         nextButton.parentElement.appendChild(newButton);
         nextButton.parentElement.appendChild(nextButton);
     }
