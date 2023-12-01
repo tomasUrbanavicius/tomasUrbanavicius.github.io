@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7768c106-247a-4274-b6be-f9e5aef3d065" name="Changes" comment="Added script" />
+    <list default="true" id="7768c106-247a-4274-b6be-f9e5aef3d065" name="Changes" comment="Add defer">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.tomasUrbanavicius.github.io.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tomasUrbanavicius.github.io.dir/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +33,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1701252150258</updated>
-      <workItem from="1701252160991" duration="5252000" />
+      <workItem from="1701252160991" duration="5873000" />
     </task>
     <task id="LOCAL-00001" summary="Stormgeo login page">
       <created>1701252234761</created>
@@ -110,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701413467726</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add defer">
+      <created>1701414095509</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701414095509</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +148,7 @@
     <MESSAGE value="Path" />
     <MESSAGE value="Add fonts" />
     <MESSAGE value="Added script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added script" />
+    <MESSAGE value="Add defer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add defer" />
   </component>
 </project>

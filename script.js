@@ -21,18 +21,17 @@
     }
 })();
 
-document.addEventListener("DOMContentLoaded", function () {
-    const elem = document.getElementById('api');
+const elem = document.getElementById('api');
+changeElements();
+console.log(elem);
+observeDOM(elem, function (m) {
+    var addedNodes = [], removedNodes = [];
+    m.forEach(record => record.addedNodes.length & addedNodes.push(...record.addedNodes))
+
+    m.forEach(record => record.removedNodes.length & removedNodes.push(...record.removedNodes))
+
     changeElements();
-    observeDOM(elem, function (m) {
-        var addedNodes = [], removedNodes = [];
-        m.forEach(record => record.addedNodes.length & addedNodes.push(...record.addedNodes))
-
-        m.forEach(record => record.removedNodes.length & removedNodes.push(...record.removedNodes))
-
-        changeElements();
-        console.log('Added:', addedNodes, 'Removed:', removedNodes);
-    });
+    console.log('Added:', addedNodes, 'Removed:', removedNodes);
 });
 
 
