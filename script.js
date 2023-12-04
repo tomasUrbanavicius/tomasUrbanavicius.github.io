@@ -17,6 +17,7 @@
         else if (window.addEventListener) {
             obj.addEventListener('DOMNodeInserted', callback, false)
             obj.addEventListener('DOMNodeRemoved', callback, false)
+            obj.addEventListener('DOMCharacterDataModified', callback, false)
         }
     }
 })();
