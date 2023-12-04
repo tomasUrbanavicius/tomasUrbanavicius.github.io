@@ -56,13 +56,38 @@ function changeElements() {
         nextButton.parentElement.appendChild(nextButton);
     }
 
-    //add hint to email field
+    const emailField = document.getElementById('email');
+    const verificationField = document.getElementById('email_ver_input');
     const verificationButton = document.getElementById('email_ver_but_send');
-    if (verificationButton) {
+    const continueButton = document.getElementById('continue');
+    const isSendVerificationStep = verificationButton?.style.display !== 'none' && verificationField?.style.display === 'none';
+    const isVerificationCodeStep = verificationField?.style.display !== 'none' && verificationButton?.style.display === 'none';
+
+    if (isSendVerificationStep) {
+        //add hint to email field
         const emailInput = document.getElementById('email');
         const emailHint = new URLSearchParams(window.location.search).get('hint');
         if (emailInput && emailHint) {
             emailInput.value = emailHint;
         }
+
+        //hide continue button
+        continueButton.style.display = 'none'
+    }
+
+    //show verification code
+    if (isVerificationCodeStep && emailField.style.display !== 'none') {
+        emailField.style.display = 'none';
+        const verificationDiv = document.getElementById('email_ver_input_label');
+        verificationDiv.innerHTML  = verificationDiv.innerText.replace('{0}', '<b>' + emailField.value + '</b><br/>');
+
+        //hide continue button
+        continueButton.style.display = 'none'
+
+        const verifyButton = document.getElementById('email_ver_but_verify');
+        verifyButton.parentElement.appendChild(verifyButton);
+        verifyButton.innerText = 'Continue';
+
+        document.getElementById('email_ver_but_resend').innerText = 'Resend verification email';
     }
 }

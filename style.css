@@ -1,17 +1,3 @@
-.material-symbols-sharp {
-    font-variation-settings: 'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
-}
-
-body {
-    background-image: url("https://tomasurbanavicius.github.io/background.jpg");
-    background-size: cover;
-    font-family: Open Sans, sans-serif;
-    background-attachment: fixed;
-}
-
 #api {
     background: white;
     border-radius: 4px;
@@ -23,115 +9,77 @@ body {
     width: 470px;
 }
 
-.intro::before {
-    content: url("https://tomasurbanavicius.github.io/stormgeo-logo.png");
-    left: 110px;
-    position: relative;
-    width: 250px;
+#cancel {
+    display: none;
 }
 
-.intro p {
-    padding-top: 16px;
-    display: block;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 40px;
+#email_label {
+    display: none;
 }
 
-.TextBox {
-    display: block;
+#email_ver_but_resend {
+    background: white;
+    border: none;
+    color: #0E5DF9;
 }
 
-ul {
-    padding: 0;
+#email_ver_but_resend {
+    margin: auto;
+    width: fit-content;
+}
+
+#email_ver_but_resend:hover {
+    background: #f0f0f0;
+}
+
+#email_ver_but_send {
+    background: #0E5DF9;
+    border-color: #0E5DF9;
+    color: white;
+    margin: 16px auto 0 auto;
+    width: fit-content;
+}
+
+#email_ver_but_send:hover {
+    background: #0c4cc8;
+}
+
+#email_ver_but_verify {
+    background: #0E5DF9;
+    border-color: #0E5DF9;
+    color: white;
+    margin: auto;
+    width: fit-content;
+}
+
+#email_ver_but_verify:hover {
+    background: #0c4cc8;
+}
+
+#email_ver_input_label {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+#forgotPassword {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
 }
 
 #signInName_label {
     display: none;
 }
 
-input {
-    width: -webkit-fill-available;
-    height: 36px;
-    border: 1px solid #767676;
-    border-radius: 4px;
-    padding: 0 8px;
-}
-
-.helpLink {
-    display: none;
-}
-
-#cancel {
-    display: none;
-}
-
-button {
-    padding: 0 24px;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 20px;
-    height: 54px;
-}
-
-button[type="submit"] {
-    background: #0E5DF9;
-    color: white;
-    border-color: #0E5DF9;
-}
-
-button[type="submit"]:hover {
-    background: #0c4cc8;
-}
-
-.buttons {
-    margin: 0 auto;
-    width: fit-content;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.entry-item {
-    margin-bottom: 16px;
-}
-
-.entry-item label[for="signInName"] {
-    display: none;
-}
-
-.password-label label {
-    display: none;
-}
-
-.password-label {
-    text-align: center;
-    margin-top: 16px;
-}
-
-.username {
-    width: fit-content;
-    margin: auto;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-#forgotPassword {
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 20px;
-}
-
-.back-button:hover {
-    background: #f0f0f0;
+.TextBox {
+    display: block;
 }
 
 .back-button {
-    margin-right: 24px;
-    color: #0E5DF9;
     background: white;
     border: none;
+    color: #0E5DF9;
+    margin-right: 24px;
 }
 
 .back-button-text {
@@ -139,23 +87,116 @@ button[type="submit"]:hover {
     grid-template-columns: auto auto;
 }
 
+.back-button:hover {
+    background: #f0f0f0;
+}
+
 .back-icon {
     font-size: 20px;
-    line-height: 18px;
     font-weight: 400;
+    line-height: 18px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.buttons.verify {
+    grid-gap: 16px;
+    grid-template-columns: auto;
+    width: 100%;
+}
+
+.entry-item label[for="signInName"] {
+    display: none;
+}
+
+.entry-item {
+    margin-bottom: 16px;
+}
+
+.helpLink {
+    display: none;
+}
+
+.intro p {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    padding-top: 16px;
+}
+
+.intro::before {
+    content: url("https://tomasurbanavicius.github.io/stormgeo-logo.png");
+    left: 110px;
+    position: relative;
+    width: 250px;
+}
+
+.material-symbols-sharp {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.password-label label {
+    display: none;
+}
+
+.password-label {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin: auto;
+    width: fit-content;
 }
 
 .verificationInfoText {
     display: none !important;
 }
 
-#email_label {
-    display: none;
+body {
+    background-attachment: fixed;
+    background-image: url("https://tomasurbanavicius.github.io/background.jpg");
+    background-size: cover;
+    font-family: Open Sans, sans-serif;
 }
 
-#email_ver_but_send {
+button {
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    height: 54px;
+    line-height: 20px;
+    padding: 0 24px;
+}
+
+button[type="submit"] {
     background: #0E5DF9;
     border-color: #0E5DF9;
     color: white;
-    margin-top: 16px;
+}
+
+button[type="submit"]:hover {
+    background: #0c4cc8;
+}
+
+input {
+    border-radius: 4px;
+    border: 1px solid #767676;
+    height: 36px;
+    padding: 0 8px;
+    width: -webkit-fill-available;
+}
+
+ul {
+    padding: 0;
 }
