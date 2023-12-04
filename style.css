@@ -144,3 +144,18 @@ button[type="submit"]:hover {
     line-height: 18px;
     font-weight: 400;
 }
+
+.verificationInfoText {
+    display: none !important;
+}
+
+#email_label {
+    display: none;
+}
+
+#email_ver_but_send {
+    background: #0E5DF9;
+    border-color: #0E5DF9;
+    color: white;
+    margin-top: 16px;
+}
