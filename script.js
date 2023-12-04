@@ -55,4 +55,14 @@ function changeElements() {
         nextButton.parentElement.appendChild(newButton);
         nextButton.parentElement.appendChild(nextButton);
     }
+
+    //add hint to email field
+    const verificationButton = document.getElementById('email_ver_but_send');
+    if (verificationButton) {
+        const emailInput = document.getElementById('email');
+        const emailHint = new URLSearchParams(window.location.search).get('hint');
+        if (emailInput && emailHint) {
+            emailInput.value = emailHint;
+        }
+    }
 }
