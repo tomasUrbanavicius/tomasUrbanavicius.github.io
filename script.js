@@ -84,8 +84,8 @@ function changeElements() {
     //show verification code
     if (isVerificationCodeStep && emailField.style.display !== 'none') {
         emailField.style.display = 'none';
-        const verificationDiv = document.getElementById('email_ver_input_label');
-        verificationDiv.innerHTML  = verificationDiv.innerText.replace('{0}', '<b>' + emailField.value + '</b><br/>');
+        const verificationDiv = document.getElementById('email_info');
+        verificationDiv.innerHTML = verificationDiv.innerText.replace('{0}', '<b>' + emailField.value + '</b><br/>');
 
         //hide continue button
         continueButton.style.display = 'none'

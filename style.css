@@ -9,6 +9,10 @@
     width: 470px;
 }
 
+#continue {
+    margin-top: 48px;
+}
+
 #cancel {
     display: none;
 }
@@ -56,9 +60,13 @@
     background: #0c4cc8;
 }
 
-#email_ver_input_label {
+#email_info {
     font-size: 13px;
     line-height: 20px;
+}
+
+#email_ver_input_label {
+    display: none;
 }
 
 #forgotPassword {
@@ -95,10 +103,6 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 18px;
-}
-
-#attributeList {
-    margin-bottom: 48px;
 }
 
 .buttons {
