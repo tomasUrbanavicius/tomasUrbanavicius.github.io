@@ -98,7 +98,8 @@ function changeElements() {
     }
 
     //skip continue step
-    if (document.getElementById('email_success')?.style.display !== 'none') {
+    var verificationSuccess = document.getElementById('email_success');
+    if (verificationSuccess !== null && verificationSuccess.style.display !== 'none') {
         console.log(document.getElementById('email_success'));
         continueButton.click();
     }
