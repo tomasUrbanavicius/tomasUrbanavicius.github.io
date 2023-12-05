@@ -36,7 +36,7 @@
     background: #0E5DF9;
     border-color: #0E5DF9;
     color: white;
-    margin: 16px auto 0 auto;
+    margin: 48px auto 0 auto;
     width: fit-content;
 }
 
@@ -152,6 +152,7 @@
 
 .password-label label {
     display: none;
+    margin-bottom: 48px;
 }
 
 .password-label {
@@ -163,12 +164,17 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    margin: auto;
+    margin: 48px auto 0 auto;
     width: fit-content;
 }
 
-.verificationInfoText {
-    display: none !important;
+div:has(> #email_intro) {
+    margin-bottom: 16px;
+}
+
+#email_intro {
+    font-size: 13px;
+    line-height: 20px;
 }
 
 body {
