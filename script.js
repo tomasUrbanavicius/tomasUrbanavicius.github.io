@@ -96,4 +96,9 @@ function changeElements() {
 
         document.getElementById('email_ver_but_resend').innerText = 'Resend verification email';
     }
+
+    //skip continue step
+    if (document.getElementById('email_success')?.style.display !== 'none') {
+        continueButton.click();
+    }
 }
