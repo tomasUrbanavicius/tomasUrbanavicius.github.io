@@ -34,6 +34,9 @@
     observeDOM(elem, function (m) {
         changeElements();
     });
+    addEventListener("DOMContentLoaded", () => {
+        changeElements();
+    });
 })();
 
 function changeElements() {
