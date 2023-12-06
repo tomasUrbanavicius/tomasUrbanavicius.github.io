@@ -28,7 +28,7 @@
 })();
 
 (() => {
-    document.getElementsByClassName('buttons')[0].style.display = 'none';
+    alert(1);
     const elem = document.getElementById('api');
     changeElements();
     observeDOM(elem, function (m) {
