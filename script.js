@@ -28,14 +28,14 @@
 })();
 
 (() => {
-    alert('register');
     const elem = document.getElementById('api');
     changeElements();
-    observeDOM(elem, function (m) {
-        changeElements();
-    });
     addEventListener("DOMContentLoaded", () => {
         changeElements();
+        observeDOM(elem, function () {
+            alert('register');
+            changeElements();
+        });
     });
 })();
 
