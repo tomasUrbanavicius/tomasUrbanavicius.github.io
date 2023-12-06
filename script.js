@@ -37,8 +37,8 @@
 
 function changeElements() {
     const buttonsElem = document.getElementsByClassName('buttons')[0];
-    console.log(buttonsElem, buttonsElem.innerHTML, buttonsElem.innerHTML.length);
-    if (buttonsElem.innerHTML.length === 0) {
+    console.log(buttonsElem, buttonsElem.innerHTML.trim(), buttonsElem.innerHTML.trim().length);
+    if (buttonsElem.innerHTML.trim().length === 0) {
         buttonsElem.style.display = 'none';
     }
 
