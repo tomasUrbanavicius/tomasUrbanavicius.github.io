@@ -6,19 +6,37 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 470px;
-}
-
-#continue {
-    margin-top: 48px;
+    width: 374px;
 }
 
 #cancel {
     display: none;
+    margin-right: 24px;
+}
+
+#email_info {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+#email_intro {
+    font-size: 13px;
+    line-height: 20px;
 }
 
 #email_label {
     display: none;
+}
+
+#email_ver_but_resend {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    display: inline;
+    height: auto;
+    margin: 0 auto 36px auto;
+    padding: 0;
 }
 
 #email_ver_but_resend {
@@ -52,7 +70,7 @@
     background: #0E5DF9;
     border-color: #0E5DF9;
     color: white;
-    margin: auto;
+    margin: 32px auto 0 auto;
     width: fit-content;
 }
 
@@ -60,30 +78,38 @@
     background: #0c4cc8;
 }
 
-#email_info {
-    font-size: 13px;
-    line-height: 20px;
-}
-
 #email_ver_input_label {
     display: none !important;
 }
 
 #forgotPassword {
-    font-size: 13px;
+    border-radius: 4px;
     font-weight: 600;
-    line-height: 20px;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
+#newPassword_label {
+    display: none !important;
+}
+
+#reenterPassword_label {
+    display: none !important;
 }
 
 #signInName_label {
     display: none;
 }
 
+.Password {
+    margin-bottom: 16px;
+}
+
 .TextBox {
     display: block;
 }
 
-.back-button {
+.back-button, #forgotPassword {
     background: white;
     border: none;
     color: #0E5DF9;
@@ -95,8 +121,8 @@
     grid-template-columns: auto auto;
 }
 
-.back-button:hover {
-    background: #f0f0f0;
+.back-button:hover, #forgotPassword:hover {
+    background: #E6EEFE;
 }
 
 .back-icon {
@@ -108,13 +134,14 @@
 .buttons {
     display: grid;
     grid-template-columns: auto auto;
-    margin: 0 auto;
+    margin: 48px auto 0 auto;
     width: fit-content;
 }
 
 .buttons.verify {
     grid-gap: 16px;
     grid-template-columns: auto;
+    margin-top: 0;
     width: 100%;
 }
 
@@ -130,13 +157,18 @@
     display: none;
 }
 
+.info-item {
+    display: list-item;
+    margin-left: 24px;
+}
+
 .intro p {
     display: block;
     font-size: 28px;
     font-weight: 700;
     line-height: 40px;
-    padding-top: 48px;
     margin: 0;
+    padding-top: 48px;
 }
 
 .intro {
@@ -145,13 +177,17 @@
 
 .intro::before {
     content: url("https://tomasurbanavicius.github.io/stormgeo-logo.png");
-    left: 110px;
+    left: 63px;
     position: relative;
     width: 250px;
 }
 
 .material-symbols-sharp {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.password-info {
+    margin-top: 16px;
 }
 
 .password-label label {
@@ -172,24 +208,18 @@
     width: fit-content;
 }
 
-div:has(> #email_intro) {
-    margin-bottom: 16px;
-}
-
-#email_intro {
-    font-size: 13px;
-    line-height: 20px;
-}
-
 body {
     background-attachment: fixed;
     background-image: url("https://tomasurbanavicius.github.io/background.jpg");
     background-size: cover;
     font-family: Open Sans, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
 }
 
 button {
     border-radius: 4px;
+    border: none;
     cursor: pointer;
     font-size: 13px;
     font-weight: 600;
@@ -200,12 +230,15 @@ button {
 
 button[type="submit"] {
     background: #0E5DF9;
-    border-color: #0E5DF9;
     color: white;
 }
 
 button[type="submit"]:hover {
     background: #0c4cc8;
+}
+
+div:has(> #email_intro) {
+    margin-bottom: 16px;
 }
 
 input {
@@ -216,7 +249,11 @@ input {
     width: -webkit-fill-available;
 }
 
+li {
+    display: block;
+}
+
 ul {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }

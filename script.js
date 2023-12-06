@@ -78,7 +78,9 @@ function changeElements() {
         }
 
         //hide continue button
-        continueButton.style.display = 'none'
+        continueButton.style.display = 'none';
+        document.getElementsByClassName('buttons')[2].style.display = 'none';
+        document.getElementById('email_ver_wait').innerText = 'Please wait';
     }
 
     //show verification code
@@ -88,19 +90,36 @@ function changeElements() {
         verificationDiv.innerHTML = verificationDiv.innerText.replace('{0}', '<b>' + emailField.value + '</b><br/>');
 
         //hide continue button
-        continueButton.style.display = 'none'
+        continueButton.style.display = 'none';
 
         const verifyButton = document.getElementById('email_ver_but_verify');
         verifyButton.parentElement.appendChild(verifyButton);
         verifyButton.innerText = 'Continue';
 
         document.getElementById('email_ver_but_resend').innerText = 'Resend verification email';
+        document.getElementsByClassName('intro')[0].firstElementChild.innerHTML = 'Check your email';
     }
 
     //skip continue step
-    var verificationSuccess = document.getElementById('email_success');
+    const verificationSuccess = document.getElementById('email_success');
     if (verificationSuccess !== null && verificationSuccess.style.display !== 'none') {
-        console.log(document.getElementById('email_success'));
         continueButton.click();
+    }
+
+    //show change password
+    const newPassword = document.getElementById('newPassword');
+    const cancelButton = document.getElementById('cancel');
+    if (newPassword !== null && newPassword.style.display !== 'none' && cancelButton.style.display !== 'block') {
+        document.getElementsByClassName('intro')[0].firstElementChild.innerHTML = 'Create a password';
+        cancelButton.style.display = 'block';
+        cancelButton.classList.add('back-button');
+        continueButton.parentElement.appendChild(continueButton);
+        const passwordInfo = document.createElement('div');
+        passwordInfo.className = 'password-info';
+        passwordInfo.innerHTML = 'Strong password:' +
+            '<div class="info-item">contains at least 8 characters</div>' +
+            '<div class="info-item">contains both lower (a-z) and upper case letters (A-Z)</div>' +
+            '<div class="info-item">contains at least one number (0-9) or a symbol</div>';
+        document.getElementById('reenterPassword').parentElement.appendChild(passwordInfo);
     }
 }
