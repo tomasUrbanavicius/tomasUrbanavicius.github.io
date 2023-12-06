@@ -27,11 +27,14 @@
     }
 })();
 
-const elem = document.getElementById('api');
-changeElements();
-observeDOM(elem, function (m) {
+(() => {
+    document.getElementsByClassName('buttons')[0].style.display = 'none';
+    const elem = document.getElementById('api');
     changeElements();
-});
+    observeDOM(elem, function (m) {
+        changeElements();
+    });
+})();
 
 function changeElements() {
     //Change email input to div
