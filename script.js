@@ -12,8 +12,8 @@
 
             // have the observer observe for changes in children
             mutationObserver.observe(obj, {
-                attributeFilter: ['style'],
-                attributes: true,
+                //attributeFilter: ['style'],
+                //attributes: true,
                 childList: true,
                 subtree: true,
             });
