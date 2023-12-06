@@ -28,7 +28,6 @@
 })();
 
 (() => {
-    alert(1);
     const elem = document.getElementById('api');
     changeElements();
     observeDOM(elem, function (m) {
@@ -37,6 +36,11 @@
 })();
 
 function changeElements() {
+    const buttonsElem = document.getElementsByClassName('buttons')[0];
+    if (buttonsElem.innerHTML.length === 0) {
+        buttonsElem.style.display = 'none';
+    }
+
     //Change email input to div
     const input = document.getElementById('signInName');
     if (input) {
