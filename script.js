@@ -28,7 +28,7 @@
 })();
 
 (() => {
-    console.log('register');
+    alert('register');
     const elem = document.getElementById('api');
     changeElements();
     observeDOM(elem, function (m) {
@@ -37,7 +37,7 @@
 })();
 
 function changeElements() {
-    console.log('run');
+    alert('run');
     const buttonsElem = document.getElementsByClassName('buttons')[0];
     if (buttonsElem && buttonsElem.innerHTML.trim().length === 0) {
         buttonsElem.style.display = 'none';
