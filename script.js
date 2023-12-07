@@ -28,14 +28,11 @@
 })();
 
 (() => {
-    const elem = document.getElementById('api');
+    const elem = document.getElementsByTagName('body')[0];
     changeElements();
-    addEventListener("DOMContentLoaded", () => {
+    observeDOM(elem, function () {
+        alert('register');
         changeElements();
-        observeDOM(elem, function () {
-            alert('register');
-            changeElements();
-        });
     });
 })();
 
