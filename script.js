@@ -40,7 +40,7 @@ const observeDOM = (function () {
 function changeElements() {
     const buttonsElem = document.getElementsByClassName('buttons')[0];
     if (buttonsElem && buttonsElem.innerHTML.trim().length === 0 && buttonsElem.style.display !== 'none') {
-        alert(1);
+        console.log(1);
         buttonsElem.style.display = 'none';
     }
 
@@ -50,7 +50,7 @@ function changeElements() {
         const email = input.getAttribute('value');
         if (input.innerHTML !== email) {
             if (email) {
-                alert(2);
+                console.log(2);
                 input.outerHTML = '<div class="username">' + email + '</div>';
             }
         }
@@ -59,7 +59,7 @@ function changeElements() {
     //Move forgot password link
     const passwordLabel = document.getElementsByClassName('password-label')[0];
     if (passwordLabel && passwordLabel.parentElement.firstElementChild === passwordLabel) {
-        alert(3);
+        console.log(3);
         passwordLabel.parentElement.appendChild(passwordLabel);
     }
 
@@ -67,7 +67,7 @@ function changeElements() {
     const nextButton = document.getElementById('next');
     const backButton = document.getElementsByClassName('back-button');
     if (nextButton && backButton.length === 0) {
-        alert(4);
+        console.log(4);
         const newButton = document.createElement('button');
         newButton.className = 'back-button';
         newButton.innerHTML = '<div class="back-button-text" onclick="location.reload()"><span class="material-icons back-icon">arrow_back_ios</span>Back</div>';
@@ -83,7 +83,7 @@ function changeElements() {
     const isVerificationCodeStep = verificationField?.style.display !== 'none' && verificationButton?.style.display === 'none';
 
     if (isSendVerificationStep && continueButton.style.display !== 'none') {
-        alert(5);
+        console.log(5);
         //add hint to email field
         const emailInput = document.getElementById('email');
         const emailHint = new URLSearchParams(window.location.search).get('hint');
@@ -99,7 +99,7 @@ function changeElements() {
 
     //show verification code
     if (isVerificationCodeStep && emailField.style.display !== 'none') {
-        alert(6);
+        console.log(6);
         emailField.style.display = 'none';
         const verificationDiv = document.getElementById('email_info');
         verificationDiv.innerHTML = verificationDiv.innerText.replace('{0}', '<b>' + emailField.value + '</b><br/>');
@@ -118,7 +118,7 @@ function changeElements() {
     //skip continue step
     const verificationSuccess = document.getElementById('email_success');
     if (verificationSuccess !== null && verificationSuccess.style.display !== 'none' && !continueClicked) {
-        alert(7);
+        console.log(7);
         continueClicked = true;
         continueButton.click();
     }
@@ -127,7 +127,7 @@ function changeElements() {
     const newPassword = document.getElementById('newPassword');
     const cancelButton = document.getElementById('cancel');
     if (newPassword !== null && newPassword.style.display !== 'none' && cancelButton.style.display !== 'block') {
-        alert(8);
+        console.log(8);
         document.getElementsByClassName('intro')[0].firstElementChild.innerHTML = 'Create a password';
         cancelButton.style.display = 'block';
         cancelButton.classList.add('back-button');
