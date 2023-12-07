@@ -1,4 +1,6 @@
-﻿const observeDOM = (function () {
+﻿var continueClicked = false;
+
+const observeDOM = (function () {
     const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
     return function (obj, callback) {
@@ -115,8 +117,9 @@ function changeElements() {
 
     //skip continue step
     const verificationSuccess = document.getElementById('email_success');
-    if (verificationSuccess !== null && verificationSuccess.style.display !== 'none') {
+    if (verificationSuccess !== null && verificationSuccess.style.display !== 'none' && !continueClicked) {
         alert(7);
+        continueClicked = true;
         continueButton.click();
     }
 
