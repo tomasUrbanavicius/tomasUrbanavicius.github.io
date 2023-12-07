@@ -85,6 +85,7 @@
 #forgotPassword {
     border-radius: 4px;
     font-weight: 600;
+    margin-right: 0 !important;
     padding: 4px 8px;
     text-decoration: none;
 }

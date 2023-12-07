@@ -12,8 +12,8 @@
 
             // have the observer observe for changes in children
             mutationObserver.observe(obj, {
-                //attributeFilter: ['style'],
-                //attributes: true,
+                attributeFilter: ['style'],
+                attributes: true,
                 childList: true,
                 subtree: true,
             });
@@ -31,13 +31,11 @@
     const elem = document.getElementsByTagName('body')[0];
     changeElements();
     observeDOM(elem, function () {
-        alert('register');
         changeElements();
     });
 })();
 
 function changeElements() {
-    alert('run');
     const buttonsElem = document.getElementsByClassName('buttons')[0];
     if (buttonsElem && buttonsElem.innerHTML.trim().length === 0) {
         buttonsElem.style.display = 'none';
