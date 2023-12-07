@@ -80,7 +80,7 @@ function changeElements() {
     const isSendVerificationStep = verificationButton?.style.display !== 'none' && verificationField?.style.display === 'none';
     const isVerificationCodeStep = verificationField?.style.display !== 'none' && verificationButton?.style.display === 'none';
 
-    if (isSendVerificationStep) {
+    if (isSendVerificationStep && continueButton.style.display !== 'none') {
         alert(5);
         //add hint to email field
         const emailInput = document.getElementById('email');
