@@ -46,10 +46,20 @@
     display: none !important;
 }
 
-#forgotPassword, #email_ver_but_resend {
+#forgotPassword {
     border-radius: 4px;
     font-weight: 600;
     margin-right: 0 !important;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
+#email_ver_but_resend {
+    border-radius: 4px;
+    display: inline;
+    font-weight: 600;
+    height: auto;
+    margin: 0 auto !important;
     padding: 4px 8px;
     text-decoration: none;
 }
