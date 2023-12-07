@@ -14,44 +14,8 @@
     margin-right: 24px;
 }
 
-#email_info {
-    font-size: 13px;
-    line-height: 20px;
-}
-
-#email_intro {
-    font-size: 13px;
-    line-height: 20px;
-}
-
 #email_label {
     display: none;
-}
-
-#email_ver_but_resend {
-    background: none;
-    border: none;
-    color: blue;
-    cursor: pointer;
-    display: inline;
-    height: auto;
-    margin: 0 auto 36px auto;
-    padding: 0;
-}
-
-#email_ver_but_resend {
-    background: white;
-    border: none;
-    color: #0E5DF9;
-}
-
-#email_ver_but_resend {
-    margin: auto;
-    width: fit-content;
-}
-
-#email_ver_but_resend:hover {
-    background: #f0f0f0;
 }
 
 #email_ver_but_send {
@@ -82,7 +46,7 @@
     display: none !important;
 }
 
-#forgotPassword {
+#forgotPassword, #email_ver_but_resend {
     border-radius: 4px;
     font-weight: 600;
     margin-right: 0 !important;
@@ -110,7 +74,7 @@
     display: block;
 }
 
-.back-button, #forgotPassword {
+.back-button, #forgotPassword, #email_ver_but_resend {
     background: white;
     border: none;
     color: #0E5DF9;
@@ -122,7 +86,7 @@
     grid-template-columns: auto auto;
 }
 
-.back-button:hover, #forgotPassword:hover {
+.back-button:hover, #forgotPassword:hover, #email_ver_but_resend:hover {
     background: #E6EEFE;
 }
 
