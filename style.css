@@ -18,6 +18,16 @@
     display: none;
 }
 
+#email_ver_but_resend {
+    border-radius: 4px;
+    display: inline;
+    font-weight: 600;
+    height: auto;
+    margin: 0 auto !important;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
 #email_ver_but_send {
     background: #0E5DF9;
     border-color: #0E5DF9;
@@ -54,16 +64,6 @@
     text-decoration: none;
 }
 
-#email_ver_but_resend {
-    border-radius: 4px;
-    display: inline;
-    font-weight: 600;
-    height: auto;
-    margin: 0 auto !important;
-    padding: 4px 8px;
-    text-decoration: none;
-}
-
 #newPassword_label {
     display: none !important;
 }
@@ -74,6 +74,21 @@
 
 #signInName_label {
     display: none;
+}
+
+#simplemodal-container {
+    display: none !important;
+}
+
+#simplemodal-overlay {
+    background: white !important;
+    height: 100vh;
+    left: 0;
+    opacity: 1 !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
 }
 
 .Password {
@@ -128,6 +143,31 @@
     margin-bottom: 16px;
 }
 
+.error {
+    background: #FAE6E6;
+    border-radius: 4px;
+    border: 1px solid #F0BABA;
+    margin-bottom: 16px;
+    padding: 12px 8px 12px 36px;
+    position: relative;
+    width: 300px;
+}
+
+.error-icon {
+    color: #D32F2F;
+    font-size: 20px;
+    font-weight: 400;
+    left: 18px;
+    line-height: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error.itemLevel {
+    display: none;
+}
+
 .helpLink {
     display: none;
 }
@@ -157,6 +197,38 @@
     width: 250px;
 }
 
+.loading circle {
+    animation: dash var(--spinner-duration) ease-in-out infinite;
+    fill: none;
+    stroke-dasharray: var(--spinner-offset);
+    stroke-linecap: round;
+    stroke-width: 6;
+    stroke: #0e5df9;
+    transform-origin: center;
+}
+
+.loading svg {
+    animation: rotator var(--spinner-duration) linear infinite;
+}
+
+.loading {
+    display: inline-block;
+    height: var(--spinner-size);
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--spinner-size);
+}
+
+.loading::before {
+    content: url("https://tomasurbanavicius.github.io/stormgeo-logo.png");
+    left: 50%;
+    position: absolute;
+    top: -20px;
+    transform: translate(-50%, -50%);
+}
+
 .material-symbols-sharp {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
@@ -181,6 +253,36 @@
     line-height: 24px;
     margin: 48px auto 0 auto;
     width: fit-content;
+}
+
+:root {
+    --spinner-duration: 2400ms;
+    --spinner-offset-min: 20;
+    --spinner-offset: 145;
+    --spinner-size: 65px;
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: var(--spinner-offset);
+    }
+    50% {
+        stroke-dashoffset: var(--spinner-offset-min);
+        transform: rotate(135deg);
+    }
+    100% {
+        stroke-dashoffset: var(--spinner-offset);
+        transform: rotate(450deg);
+    }
+}
+
+@keyframes rotator {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
 }
 
 body {
@@ -226,6 +328,10 @@ input {
 
 li {
     display: block;
+}
+
+p {
+    margin: 0;
 }
 
 ul {
