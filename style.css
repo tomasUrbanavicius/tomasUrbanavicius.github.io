@@ -81,7 +81,9 @@
 }
 
 #simplemodal-overlay {
-    background: white !important;
+    background-attachment: fixed;
+    background-image: url("https://tomasurbanavicius.github.io/background.jpg") !important;
+    background-size: cover;
     height: 100vh;
     left: 0;
     opacity: 1 !important;
