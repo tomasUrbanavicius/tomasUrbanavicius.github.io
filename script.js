@@ -92,8 +92,8 @@ function changeLoadingStepDom() {
         spinner.id = 'loading';
         spinner.innerHTML = '<svg viewBox="0 0 66 66"><circle cx="33" cy="33" r="23" /></svg>';
         const overlay = document.getElementById('simplemodal-overlay');
-        overlay.appendChild(spinner);
         overlay.appendChild(backgroundDiv);
+        overlay.appendChild(spinner);
     }
 
     //Change email step will be skipped while showing loader
