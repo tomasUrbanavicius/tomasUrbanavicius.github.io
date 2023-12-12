@@ -85,11 +85,15 @@ function changeLoadingStepDom() {
     console.log('changeLoadingStepDom');
 
     if (!document.getElementById('loading')) {
+        const backgroundDiv = document.createElement('div');
+        backgroundDiv.className = 'loading-background';
         const spinner = document.createElement('div');
-        spinner.className = 'loading'
-        spinner.id = 'loading'
+        spinner.className = 'loading';
+        spinner.id = 'loading';
         spinner.innerHTML = '<svg viewBox="0 0 66 66"><circle cx="33" cy="33" r="23" /></svg>';
-        document.getElementById('simplemodal-overlay').appendChild(spinner);
+        const overlay = document.getElementById('simplemodal-overlay');
+        overlay.appendChild(spinner);
+        overlay.appendChild(backgroundDiv);
     }
 
     //Change email step will be skipped while showing loader
