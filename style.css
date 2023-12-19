@@ -223,6 +223,16 @@
     width: var(--spinner-size);
 }
 
+.loading-background {
+    background: white;
+    height: 246px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 370px;
+}
+
 .loading::before {
     content: url("https://tomasurbanavicius.github.io/stormgeo-logo.png");
     left: 50%;
@@ -339,14 +349,4 @@ p {
 ul {
     margin: 0;
     padding: 0;
-}
-
-.loading-background {
-    background: white;
-    height: 246px;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 370px;
 }
